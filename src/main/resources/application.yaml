@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    id: spring-boot-prometheus
+    name: spring-boot-prometheus
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'metrics, health, beans, env, info , prometheus, loggers, configprops'
+ #       include: '*'
+  endpoint:
+    health:
+      show-details: always
+    prometheus:
+      enabled: true
+    beans:
+      enabled: true
+    loggers:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name} # used by the grafana dashboard springboot 2.1
