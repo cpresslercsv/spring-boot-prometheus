@@ -14,8 +14,8 @@ deploy:
     manifests:
     - k8s/deployment.yaml
 
-#portForward:
-#  - resourceType: deployment
-#    resourceName: spring-boot-prometheus
-#    port: 8080
-#    localPort: 9090
+portForward:
+  - resourceType: deployment
+    resourceName: demo # must match k8 deployment app name
+    port: 8080
+    localPort: 8080

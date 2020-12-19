@@ -51,29 +51,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>com.spotify</groupId>-->
-<!--				<artifactId>dockerfile-maven-plugin</artifactId>-->
-<!--				<version>1.4.13</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>default</id>-->
-<!--						<goals>-->
-<!--							<goal>build</goal>-->
-<!--							<goal>push</goal>-->
-<!--						</goals>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--				<configuration>-->
-<!--					<username>nirajsonawane</username>-->
-<!--					<password>XXXXXXXXX</password>-->
-<!--					<repository>registry.hub.docker.com/nirajsonawane/${project.artifactId}</repository>-->
-<!--					<tag>${project.version}</tag>-->
-<!--					<buildArgs>-->
-<!--						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>-->
-<!--					</buildArgs>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
 			<plugin>
 				<groupId>com.google.cloud.tools</groupId>
 				<artifactId>jib-maven-plugin</artifactId>
@@ -85,9 +62,6 @@
 					<to>
 						<image>docker.io/softvisionlvcp/spring-boot-prometheus</image>
 					</to>
-<!--					<to>-->
-<!--					<image>docker.io/softvisionlvcp/spring-boot-prometheus:latest</image>-->
-<!--				</to>-->
 					<!--
         <to>
             <image>spring-boot-prometheus</image>
