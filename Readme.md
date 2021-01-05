@@ -13,9 +13,10 @@ Requires
 Mac os
 ```
 brew install kind
+```
+Now create a single node cluster named **dev**
 
-# create a single node cluster named ev
-
+```
 kind create cluster --name dev
 ```
 Optional create a multi node cluster
