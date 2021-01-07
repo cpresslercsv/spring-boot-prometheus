@@ -1,5 +1,4 @@
-// library(
-//   identifier: 'docker-image-pipeline-library'
-// )
-//
-// generate("2.253.5")
+library(
+  identifier: 'docker-image-pipeline-library'
+)
+sonarscanner("2.253.5")
