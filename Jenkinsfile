@@ -27,7 +27,7 @@ pipeline {
         CLUSTER_NAME= credentials('cluster-name')
         RTP_SERVICE_USER = credentials('rtp-service-user')
         SALT = credentials('salt')
-        SONAR_USER_HOME=/tmp/.sonar
+        SONAR_USER_HOME=""/tmp/.sonar"
     }
     agent {
           docker {
