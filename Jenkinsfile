@@ -49,24 +49,31 @@ pipeline {
           }
         }
         stage('Build') {
-            agent {
-                docker {
-                    image DOCKER_MAVEN_IMAGE
-                    args DOCKER_MAVEN_ARGS
-                }
-            }
+//             agent {
+//                 docker {
+//                     image DOCKER_MAVEN_IMAGE
+//                     args DOCKER_MAVEN_ARGS
+//                     reuseNode true
+//                 }
+//             }
             steps{
                 sh 'mvn -B -U -DskipTests clean package'
             }
         }
         stage('Scan') {
-          steps {
-            // generate test and code coverage first
-            sh "mvn  clean test"
-
-            sh "mvn sonar:sonar -Dsonar.projectKey=${JOB_BASE_NAME} -Dsonar.host.url=https://sonarqube.softvisionvegas.com \
-              -Dsonar.login=${SONARQUBE_TOKEN}"
-          }
+//             agent {
+//                  docker {
+//                       image DOCKER_MAVEN_IMAGE
+//                       args DOCKER_MAVEN_ARGS
+//                       reuseNode true
+//                       }
+//             }
+            steps {
+              // generate test and code coverage first
+              //sh "mvn  clean test"
+              sh "mvn sonar:sonar -Dsonar.projectKey=${JOB_BASE_NAME} -Dsonar.host.url=https://sonarqube.softvisionvegas.com \
+                -Dsonar.login=${SONARQUBE_TOKEN}"
+            }
         }
     }
 }
