@@ -34,6 +34,7 @@ pipeline {
             args DOCKER_MAVEN_ARGS
             reuseNode true
           }
+    }
     stages {
         stage('Prepare') {
           steps {
