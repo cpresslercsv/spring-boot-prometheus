@@ -28,7 +28,12 @@ pipeline {
         RTP_SERVICE_USER = credentials('rtp-service-user')
         SALT = credentials('salt')
     }
-    agent any
+    agent {
+          docker {
+            image DOCKER_MAVEN_IMAGE
+            args DOCKER_MAVEN_ARGS
+            reuseNode true
+          }
     stages {
         stage('Prepare') {
           steps {
