@@ -74,8 +74,8 @@ pipeline {
               //sh "mvn  clean test"
 //               sh "sudo mkdir -p /var/lib/jenkins/.sonar"
 //               sh "chmod -R 777 /var/lib/jenkins/.sonar"
-              sh "ls -Rlt /var/lib/jenkins"
-              sh "ls -Rlt /tmp"
+//               sh "ls -Rlt /var/lib/jenkins"
+//               sh "ls -Rlt /tmp"
               sh "mvn sonar:sonar -Dsonar.projectKey=${JOB_BASE_NAME} -Dsonar.host.url=https://sonarqube.softvisionvegas.com \
                 -Dsonar.login=${SONARQUBE_TOKEN}"
             }
